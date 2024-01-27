@@ -1,0 +1,88 @@
+body {
+    background-color: white;
+    margin: 0;
+}
+
+header {
+    background-color: white;
+    list-style-type: none;
+    text-align: center; 
+    padding: 0;
+    margin: 0;
+}
+
+header nav {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
+}
+
+header img {
+    width: 5.5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 40px;
+    margin-top: 5px;
+}
+
+nav ul {
+    margin: 0;
+    height: 100px;
+    /* display: inline-block; */
+    /* padding: 20px;
+    position: relative; */
+    top: 0;
+}
+
+#navbar li {
+    display: inline-block;
+    font-size: 30px;
+    color: #18453B;
+    padding: 20px;
+    margin: 0;
+}
+
+section h1 {
+    /* margin: 0; */
+    color: white;
+    font-size: 300%;
+    vertical-align: center;
+}
+
+#campusIMG {
+    width: 100%;
+    height: 500px;
+    background-color: white;
+    background-image: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.5)), url("msucampus.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    /* border-radius: 20px; */
+    background-size: cover, cover;
+    margin: 0 25px 25px 0;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.5);
+
+}
+
+#campusIMG h1 {
+    color: white;
+    font-size: 500%;
+    text-align: center;
+    transform: translateY(225%);
+    letter-spacing: 2px;
+}
+
+#services h2 {
+    text-align: center;
+    color: #18453B;
+    font-size: 200%;
+    letter-spacing: 2px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid rgba(24, 69, 59, .5);
+}
+
+/* #campusIMG h1 {
+    width: 39%;
+    padding: 40px 5%;
+    vertical-align: middle;
+    text-align: center;
+} */
