@@ -9,7 +9,16 @@ function onload_func() {
 
 function populateFields() {
   let user = getUser();
-  //populate fields with info
+  
+  //create img for profile picture
+  let profile_picture = document.createElement("img");
+  profile_picture.src = user.profile_picture; //set image src
+  //potential alt text from user object
+
+  document.getElementById("name").textContent = "Name: " + user.name; //set text content of name
+
+  //potential description text - would need id for p element
+  
 }
 
 async function getUser() {
