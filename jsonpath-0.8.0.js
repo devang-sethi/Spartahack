@@ -85,3 +85,7 @@ function jsonPath(obj, expr, arg) {
       return P.result.length ? P.result : false;
    }
 } 
+
+export function jsonPath() {
+   jsonPath();
+}
