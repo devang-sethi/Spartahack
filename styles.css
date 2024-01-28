@@ -53,7 +53,7 @@ section h1 {
     width: 100%;
     height: 500px;
     background-color: white;
-    background-image: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.5)), url("msucampus.jpeg");
+    background-image: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.5)), url("images/msucampus.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     /* border-radius: 20px; */
@@ -99,6 +99,8 @@ a:hover {
     border-radius: 20px;
     padding: 10px;
     color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.5);
+
 }
 
 a:active {
@@ -115,34 +117,56 @@ a:active {
 
 #individual-service div {
     background-color: white;
-    border: 2px solid #0B9A6D;
+    border: 3px solid #0B9A6D;
     border-radius: 20px;
     display: inline-block;
     width: 200px;
     height: 250px;
     text-align: center;
     margin: 30px 80px 80px 30px;
+    transition-duration: .2s;
+}
+
+#individual-service div:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.5);
+    background-color: rgba(11, 154, 109, .3);
+    color: white;
 }
 
 #profile-desc {
-    width: 1000px;
+    width: 90%;
     background-color: rgba(11, 154, 109, .5);
     display: flex;
     margin: 20px 50px 20px;
     border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.5);
 }
 
 #profile-desc div {
     display: inline-block;
 }
 
-#pfp {
-    margin: 20px;
+#pfp img {
+    margin: 20px 50px 20px;
     align-self: flex-start;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.5);
+
 }
 
 #profile-info {
     margin: 20px;
     flex-direction: column;
-    text-align: right;
+    text-align: left;
+    background-color: white;
+    padding: 20px 50px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.5);
+
 }
+
+/* #profile-info div {
+    background-color: white;
+    padding: 20px 50px 20px;
+    border-radius: 30px;
+} */
