@@ -1,6 +1,6 @@
 //home_script.js
 
-import { jsonPath } from './jsonpath-0.8.0.js';
+import { jsonPath } from 'jsonpath-0.8.0.js';
 
 document.addEventListener("DOMContentLoaded", onload_func);
 
