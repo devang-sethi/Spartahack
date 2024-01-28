@@ -12,10 +12,9 @@ function displayRecListings() {
 }
 
 async function getRecListings() {
-  //const response = await fetch("file_path.json");
-  //const listings = await response.json();
-  //return listings;
-  return [1];
+  const response = await fetch("filter_for_recommended.js");
+  const listings = await response.json();
+  return listings;
 }
 
 function displayListing(obj, index, array) {
