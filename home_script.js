@@ -3,7 +3,6 @@
 document.addEventListener("DOMContentLoaded", onload_func);
 
 function onload_func() {
-  //send fetch request for top x recommended listings
   displayRecListings();
 }
 
@@ -19,8 +18,28 @@ async function getRecListings() {
   return [1];
 }
 
-function displayListing(value, index, array) {
+function displayListing(obj, index, array) {
+  //create div for listing
   listing = document.createElement("div");
-  //add stuff
+
+  //create h3 for service title
+  service_title = document.createElement("h3");
+  service_title.textContent = obj.service_title; //set text content of service title
+
+  //create img for image
+  image = document.createElement("img");
+  image.src = obj.image_src; //set image src
+  image.alt = obj.image_alt; //set image alt
+
+  //create p for service description
+  service_description = document.createElement("p");
+  service_description.textContent = obj.service_description; //set text content of service description
+
+  //append elements to listing
+  listing.appendChild(service_title);
+  listing.appendChild(image);
+  listing.appendChild(service_description);
+
+  //append listing to unordered list of reccomended services
   document.getElementById("individual-service").appendChild(listing);
 }
