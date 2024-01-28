@@ -297,3 +297,8 @@ section h1 {
     height: auto;
     object-fit: cover;
 }
+
+#aboutus p {
+    font-size: 120%;
+    margin: auto;
+}
