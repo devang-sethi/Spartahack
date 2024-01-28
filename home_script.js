@@ -1,5 +1,7 @@
 //home_script.js
 
+import { jsonPath } from './jsonpath-0.8.0.js';
+
 document.addEventListener("DOMContentLoaded", onload_func);
 
 function onload_func() {
@@ -12,9 +14,13 @@ function displayRecListings() {
 }
 
 async function getRecListings() {
-  const response = await fetch("filter_for_recommended.js");
-  const listings = await response.json();
-  return listings;
+  //const response = await fetch("filter_for_recommended.js");
+  //const listings = await response.json();
+  //return listings;
+  const response = await fetch("listing.json");
+  const listing_list = await response.json();
+  listing_recs = jsonPath(listing_list, "$.Listing[:3]").toJSONString();
+  return listing_recs;
 }
 
 function displayListing(obj, index, array) {
