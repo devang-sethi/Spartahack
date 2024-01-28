@@ -7,7 +7,7 @@ function onload_func() {
 }
 
 function displayRecListings() {
-  let listings = getRecListings();
+  let listings = JSON.parse(getRecListings());
   listings.forEach(displayListing);
 }
 
