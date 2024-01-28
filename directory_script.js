@@ -1,5 +1,7 @@
 //directory_script.js
 
+import { jsonPath } from './jsonpath-0.8.0.js';
+
 let filter_tag = ""; //may need to initialize this to a different value or not initialize it
 
 document.addEventListener("DOMContentLoaded", onload_func);
@@ -23,7 +25,7 @@ function setFilterTag() {
 }
 
 function displayListings() {
-  let listings = getListings();
+  let listings = JSON.parse(getListings());
   listings.forEach(displayListing);
 }
 
@@ -31,7 +33,11 @@ async function getListings() {
   //const response = await fetch("file_path.json?tag=${filter_tag}");  need parameter for button clicked - ?tag=${filter_tag} sends filter_tag as tag
   //const listings = await response.json();
   //return listings;
-  return [1];
+
+  const response = await fetch("listing.json");
+  const listings = await response.json();
+  listings = jsonPath(listings, "$.Listing[?@service=={filter_tag}]").toJSONString();
+  return listings;
 }
 
 function displayListing(obj, index, array) {
