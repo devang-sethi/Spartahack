@@ -1,6 +1,6 @@
 //directory_script.js
 
-import { jsonPath } from './jsonpath-0.8.0.js';
+import { jsonPath } from 'jsonpath-0.8.0.js';
 
 let filter_tag = ""; //may need to initialize this to a different value or not initialize it
 
