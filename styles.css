@@ -112,7 +112,9 @@ a:active {
 }
 
 #services {
-    text-align: center;
+    width: 100%; /* Full width */
+    text-align: center; /* Center inline-block elements */
+    padding: 10px;
 }
 
 #individual-service div {
@@ -123,7 +125,7 @@ a:active {
     width: 200px;
     height: 250px;
     text-align: center;
-    margin: 30px 80px 80px 30px;
+    margin: 30px; /* Uniform margin for top, right, bottom, and left */
     transition-duration: .2s;
 }
 
@@ -170,3 +172,120 @@ a:active {
     padding: 20px 50px 20px;
     border-radius: 30px;
 } */
+
+#contact-desc {
+    width: 90%;
+    background-color: rgba(11, 154, 109, .5);
+    display: flex;
+    margin: 20px 50px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.5);
+}
+
+#contact-desc div{
+    display: inline-block;
+}
+
+#contact-info {
+    width: 90%;
+    margin: 20px;
+    flex-direction: column;
+    text-align: left;
+    background-color: white;
+    padding: 20px 50px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.5);
+}
+
+#contact-info div {
+    /* text-align: center; */
+}
+
+#aboutus {
+    background-color: rgba(11, 154, 109, .8);
+    margin: 40px;
+    padding: 30px;
+    border-radius: 30px;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.5);
+    display: flex; /* Use flexbox to center children */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+  }
+  
+  #ourpfps {
+    width: 100%; /* Take the full width of the parent */
+    display: flex; /* Use flexbox to center children */
+    justify-content: center; /* Center children horizontally */
+    flex-wrap: wrap; /* Allow children to wrap to next line */
+    gap: 30px; /* Spacing between children */
+  }
+  
+  .ind-pfp {
+    background-color: white;
+    border: 3px solid #0B9A6D;
+    border-radius: 100px;
+    /* Remove display: inline-block; since we're using flexbox */
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height, make it equal to width for a circle */
+    text-align: center;
+    margin: 0; /* No need for margin, gap will take care of spacing */
+    transition-duration: .2s;
+  }
+  
+  .ind-pfp img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%; /* Make the image itself round */
+  }
+
+#aboutus div {
+    text-align: center;
+}
+
+#aboutus p {
+    text-align: left;
+}
+
+.ind-pfp:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.5);
+    color: white;
+    border-radius: 30px;
+}
+
+#services-filter {
+  display: flex; /* Use flexbox for alignment */
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: center; /* Center items horizontally */
+  gap: 10px; /* Space between items */
+  padding: 10px;
+  list-style-type: none; /* Remove bullet points from the list */
+}
+
+#services-filter li {
+  /* Remove the default list styling */
+  margin: 0; /* Remove margin to use gap from flexbox */
+  padding: 0; /* Padding will be applied to buttons */
+}
+
+#services-filter li button {
+  background-color: transparent;
+  transition-duration: .2s;
+  color: black;
+  letter-spacing: 2px;
+  border: 2px solid #0B9A6D;
+  border-radius: 10px;
+  padding: 10px 20px; /* Padding inside the button */
+  font-size: 20px;
+  cursor: pointer; /* Change cursor to pointer on hover */
+  /* Remove margin-left and width to allow flexbox to handle positioning */
+}
+
+#services-filter button:hover {
+    background-color: rgba(11, 154, 109, .5);
+    border-radius: 20px;
+    /* padding: 10px; */
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.5);
+}
+
