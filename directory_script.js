@@ -1,26 +1,43 @@
-//home_script.js
+//directory_script.js
 
 import { jsonPath } from 'jsonpath-0.8.0.js';
+
+let filter_tag = ""; //may need to initialize this to a different value or not initialize it
 
 document.addEventListener("DOMContentLoaded", onload_func);
 
 function onload_func() {
-  displayRecListings();
+  addClickEvents();
+  displayListings();
 }
 
-function displayRecListings() {
-  let listings = JSON.parse(getRecListings());
+function addClickEvents() {
+  let buttons = document.getElementById("services-filter");
+  buttons.forEach(addClickEvent);
+}
+
+function addClickEvent(obj, index, array) {
+  obj.childNodes[0].addEventListener("click", setFilterTag);
+}
+
+function setFilterTag() {
+  filter_tag = this.textContent;
+}
+
+function displayListings() {
+  let listings = JSON.parse(getListings());
   listings.forEach(displayListing);
 }
 
-async function getRecListings() {
-  //const response = await fetch("filter_for_recommended.js");
+async function getListings() {
+  //const response = await fetch("file_path.json?tag=${filter_tag}");  need parameter for button clicked - ?tag=${filter_tag} sends filter_tag as tag
   //const listings = await response.json();
   //return listings;
+
   const response = await fetch("listing.json");
-  const listing_list = await response.json();
-  listing_recs = jsonPath(listing_list, "$.Listing[:3]").toJSONString();
-  return listing_recs;
+  const listings = await response.json();
+  listings = jsonPath(listings, "$.Listing[?@service=={filter_tag}]").toJSONString();
+  return listings;
 }
 
 function displayListing(obj, index, array) {

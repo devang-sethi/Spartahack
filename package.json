@@ -1,0 +1,21 @@
+{
+  "name": "spartanconnect",
+  "version": "1.0.0",
+  "description": "Spartan Connect website for services",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "connect",
+    "services",
+    "website",
+    "local",
+    "Spartan Connect"
+  ],
+  "author": "Briana Hill",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^10.7.2"
+  }
+}
